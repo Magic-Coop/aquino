@@ -6,19 +6,20 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class FlyC implements CommandExecutor {
-    @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;
         if (!(p.hasPermission(""))) {
-            p.sendMessage("Sem permissão!");
-        }
+            p.sendMessage("Sem Permissão");
+
+            }
         if(p.getAllowFlight() == false) {
             p.setAllowFlight(true);
-            p.sendMessage("§a§lFLY §fModo voar §2§lATIVADO");
-        } else if(p.getAllowFlight() == true) {
+            p.sendMessage("§a§LFLY §fModo de voar §fATIVADO ");
+            } else if(p.getAllowFlight() == true) {
             p.setAllowFlight(false);
-            p.sendMessage("§a§lFLY §fModo voar §4§lDESATIVADO");
-        }
+            p.sendMessage("§a§LFLY §fModo de voar §fDESATIVADO");
+            }
         return false;
-    }
+        }
 }
+

@@ -68,7 +68,7 @@ public class TagC implements CommandExecutor {
                                         p.sendMessage("Sem permissão!");
                                     }
                                     if ((p.isOp() || !p.isOp()) && args[0].equalsIgnoreCase("membro")) {
-                                        p.sendMessage("§6§lLion§c§lMC §a - Sua tag foi alterada para §7§lMEMBRO§a.");
+                                        p.sendMessage("§fSua tag foi alterada para §7§lMEMBRO§f.");
                                         p.setDisplayName("§7§lMEMBRO §7" + p.getName());
                                         p.setPlayerListName("§7§lMEMBRO §7" + p.getName());
                                 }
