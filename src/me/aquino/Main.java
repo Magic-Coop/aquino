@@ -2,6 +2,7 @@ package me.aquino;
 
 import me.aquino.commands.ChatClearC;
 import me.aquino.commands.GamemodeCMD;
+import me.aquino.commands.TagC;
 import me.aquino.events.FormatChatE;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -31,5 +32,6 @@ public class Main extends JavaPlugin {
     public void commands() {
         getCommand("gm").setExecutor(new GamemodeCMD());
         getCommand("cc").setExecutor(new ChatClearC());
+        getCommand("tag").setExecutor(new TagC());
     }
 }

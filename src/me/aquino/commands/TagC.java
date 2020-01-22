@@ -42,8 +42,8 @@ public class TagC implements CommandExecutor {
                         } else if (p.hasPermission("group.mod")) {
                             if (args[0].equalsIgnoreCase("moderador")) {
                                 p.sendMessage("§fSua tag foi alterada para §5§l§oMODERADOR§f.");
-                                p.setDisplayName("§5§l§oMODERADOR §5");
-                                p.setPlayerListName("§5§l§oMODERADOR §5");
+                                p.setDisplayName("§5§l§oMODERADOR §5" + p.getName());
+                                p.setPlayerListName("§5§l§oMODERADOR §5" + p.getName());
 
                             } else if (p.hasPermission("group.trial")) {
                                 if (args[0].equalsIgnoreCase("trial")) {
@@ -55,7 +55,7 @@ public class TagC implements CommandExecutor {
                                     if (args[0].equalsIgnoreCase("youtuber")) {
                                         p.sendMessage("§fSua tag foi alterada para §b§l§oYOUTUBER§f.");
                                         p.setDisplayName("§b§l§oYOUTUBER §b" + p.getName());
-                                        p.setPlayerListName("§b§l§oTRIAL §b" + p.getName());
+                                        p.setPlayerListName("§b§l§oYOUTUBER §b" + p.getName());
 
                                     } else if (p.hasPermission("group.vip")) {
                                         if (args[0].equalsIgnoreCase("vip")) {
