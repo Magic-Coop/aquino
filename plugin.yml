@@ -1,0 +1,7 @@
+name: AquinoChat
+main: me.aquino.Main
+author: FireManBaby_
+version: 1.0.0
+commands:
+  gm:
+  cc:
