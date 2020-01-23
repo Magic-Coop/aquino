@@ -3,7 +3,9 @@ package me.aquino;
 import me.aquino.commands.*;
 import me.aquino.events.FormatChatE;
 import me.aquino.events.JoinMessageE;
+import me.aquino.events.QuitEventE;
 import org.bukkit.Bukkit;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -27,6 +29,7 @@ public class Main extends JavaPlugin {
     public void registerEvents() {
         Bukkit.getPluginManager().registerEvents(new FormatChatE(), this);
         Bukkit.getPluginManager().registerEvents(new JoinMessageE(), this);
+        Bukkit.getPluginManager().registerEvents(new QuitEventE(), this);
     }
 
     public void commands() {
@@ -37,5 +40,6 @@ public class Main extends JavaPlugin {
         getCommand("tp").setExecutor(new TpC());
         getCommand("tphere").setExecutor(new TpC());
         getCommand("tpall").setExecutor(new TpC());
+        getCommand("manutencao").setExecutor(new ManutentionC());
     }
 }

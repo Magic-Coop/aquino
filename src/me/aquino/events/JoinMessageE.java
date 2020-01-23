@@ -10,7 +10,7 @@ public class JoinMessageE implements Listener {
     public void onJoinM(PlayerJoinEvent e) {
         Player p = e.getPlayer();
         e.setJoinMessage(null);
-        p.sendMessage("§bBem vindo ao MagicMC");
+        p.sendMessage("§b      BEM VINDO AO MAGICMC       ");
     }
 }
 
