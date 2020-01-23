@@ -2,6 +2,7 @@ package me.aquino;
 
 import me.aquino.commands.*;
 import me.aquino.events.FormatChatE;
+import me.aquino.events.JoinMessageE;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,6 +26,7 @@ public class Main extends JavaPlugin {
 
     public void registerEvents() {
         Bukkit.getPluginManager().registerEvents(new FormatChatE(), this);
+        Bukkit.getPluginManager().registerEvents(new JoinMessageE(), this);
     }
 
     public void commands() {
@@ -33,5 +35,7 @@ public class Main extends JavaPlugin {
         getCommand("tag").setExecutor(new TagC());
         getCommand("fly").setExecutor(new FlyC());
         getCommand("tp").setExecutor(new TpC());
+        getCommand("tphere").setExecutor(new TpC());
+        getCommand("tpall").setExecutor(new TpC());
     }
 }
