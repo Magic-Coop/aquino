@@ -15,13 +15,13 @@ public class TagC implements CommandExecutor {
             if (args.length == 0) {
                 p.sendMessage("§aUse §f/tag <tag> §a para alterar sua tag!");
                 if (p.isOp() == true) {
-                    p.sendMessage("§aVocê possui as tags: §4§l§oDONO§f, §c§l§oGERENTE§f, §5§l§oMODERADOR§f, §5§l§oTRIAL§f, §b§lYOUTUBER§f, §6§lVIP§f, §7§lMEMBRO.");
+                    p.sendMessage("§aVocê possui as tags: §4§l§oDONO§f, §c§l§oGERENTE§f, §5§l§oMODERADOR§f, §5§l§oTRIAL§f, §b§lYOUTUBER§f, §6§lVIP§f, §1§lPOLICIAL,  §7§lMEMBRO.");
                 } else if (p.hasPermission("group.gerente")) {
-                    p.sendMessage("§aVocê possui as tags: §c§l§oGERENTE§f, §5§l§oMODERADOR§f, §5§l§oTRIAL§f, §b§lYOUTUBER§f, §6§lVIP§f, §7§lMEMBRO.");
+                    p.sendMessage("§aVocê possui as tags: §c§l§oGERENTE§f, §5§l§oMODERADOR§f, §5§l§oTRIAL§f, §b§lYOUTUBER§f, §6§lVIP§f, §1§lPOLICIAL,  §7§lMEMBRO.");
                 }
                 return true;
             }
-            if (p.getName().equals("FireManBaby_")) {
+            if (p.getName().equals("FireManBaby_") || p.getName().equals("zPandaKST_") || p.getName().equals("zPandaKST")) {
                 if (args[0].equalsIgnoreCase("ceo")) {
                     p.sendMessage("§fSua tag foi alterada para §4§lCEO§f.");
                     p.setDisplayName("§4§l§oCEO §4" + p.getName());
@@ -63,6 +63,12 @@ public class TagC implements CommandExecutor {
                                             p.setDisplayName("§6§lVIP §6" + p.getName());
                                             p.setPlayerListName("§6§lVIP §6" + p.getName());
 
+                                        } else if (p.isOp() == true) {
+                                            if (args[0].equalsIgnoreCase("policial")) {
+                                                p.sendMessage("§fSua tag foi alterada para §1§lPOLICIAL§f.");
+                                                p.setDisplayName("§1§lPOLICIAL §1" + p.getName());
+                                                p.setPlayerListName("§1§lPOLICIAL §1" + p.getName());
+
                                         }
                                     } else {
                                         p.sendMessage("Sem permissão!");
@@ -71,7 +77,8 @@ public class TagC implements CommandExecutor {
                                         p.sendMessage("§fSua tag foi alterada para §7§lMEMBRO§f.");
                                         p.setDisplayName("§7§lMEMBRO §7" + p.getName());
                                         p.setPlayerListName("§7§lMEMBRO §7" + p.getName());
-                                }
+                                        }
+                                    }
                                 }
                             }
                         }

@@ -29,7 +29,7 @@ public class ManutentionC implements Listener, CommandExecutor {
                             p.sendMessage("§d§lMANUTENÇÃO §F➜ §cA manutenção do §d§lLOBBY §cjá está ativada!");
                             return true;
                         } else {
-                            Bukkit.broadcastMessage("§6§lLion§c§lMC §F➜ §aA manuntenção do lobby foi ativada, todos os jogadores serão kickados em 5s.");
+                            Bukkit.broadcastMessage("§6§lAquino§c§lMC §F➜ §aA manuntenção do lobby foi ativada, todos os jogadores serão kickados em 5s.");
                             manutencao = true;
                             p.sendMessage("§d§lMANUTENCAO §F➜ §aManutenção ativada!");
                             for(Player todos : Bukkit.getOnlinePlayers()) {
@@ -45,7 +45,7 @@ public class ManutentionC implements Listener, CommandExecutor {
                             p.sendMessage("§d§lMANUTENÇÃO §F➜ §aA manutenção neste servidor já está desativada!");
                             return true;
                         } else {
-                            Bukkit.broadcastMessage("§6§lLion§c§lMC §F➜ §aA manuntenção do lobby foi desativada, agora todos podem entrar!");
+                            Bukkit.broadcastMessage("§6§lAquino§c§lMC §F➜ §aA manuntenção do lobby foi desativada, agora todos podem entrar!");
                             p.sendMessage("§d§lMANUTENCAO §F➜ §aManutenção desativada.");
                             manutencao = false;
                             return true;
@@ -61,7 +61,7 @@ public class ManutentionC implements Listener, CommandExecutor {
     public void onJoin(PlayerLoginEvent e) {
         Player p = e.getPlayer();
         if((manutencao) && (!p.isOp())) {
-            e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§6§lLion§c§lMC" + "\n" + "   §cDesculpe, estamos temporariamente em manutenção!" + "\n" + "§aVoltamos já! Estamos fazendo tudo o mais rápido possível." + "\n" + "\n" + "§ewww.lionmc.com.br");
+            e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§6§lAquino§c§lMC" + "\n" + "   §cDesculpe, estamos temporariamente em manutenção!" + "\n" + "§aVoltamos já! Estamos fazendo tudo o mais rápido possível." + "\n" + "\n" + "§ewww.lionmc.com.br");
         }
     }
 
